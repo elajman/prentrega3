@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*Nav*/
 .navbar-inverse {
   background-color: transparent;
@@ -124,4 +130,16 @@ div#contenedorCarrito img {
   writing-mode: vertical-rl;
   flex-direction: row;
   align-items: stretch;
+}
+
+p.texto-descripcion {
+  width: 50%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
