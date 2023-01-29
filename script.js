@@ -22,7 +22,7 @@ let productos = [
   { id: 0031, nombre: "Rolex", categoria: "A1", precio: 58000, stock: 3, imgUrl: "https://images.watchfinder.co.uk/imgv2/catalogue/25676/Rolex-Daytona-116506-25676-190227-143650-.jpg;quality=90;h=425" },
   { id: 0033, nombre: "Rolex", categoria: "A1", precio: 15000, stock: 10, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/229915/Rolex-GMTMasterII-116710LN-229915-2-220923-083457.jpg;quality=90;h=425" },
   { id: 0035, nombre: "Rolex", categoria: "A1", precio: 20600, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/221540/Rolex-GMTMasterII-116710BLNR-221540-2-220607-144153.jpg;quality=90;h=425" },
-  { id: 0038, nombre: "Rolex", categoria: "A1", precio: 32500, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/239023/Rolex-Daytona-116500LN-239023-2-230111-101738.jpg;quality=90;h=425" }
+  { id: 0040, nombre: "Rolex", categoria: "A1", precio: 32500, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/239023/Rolex-Daytona-116500LN-239023-2-230111-101738.jpg;quality=90;h=425" }
 ]
 
 let carrito = localStorage.getItem("carrito") ? JSON.parse(localStorage.getItem("carrito")) : []

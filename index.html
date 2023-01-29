@@ -5,10 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
- 
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://kit.fontawesome.com/84428548a0.css" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
@@ -22,8 +19,9 @@
       <div class="container">
      
         <a class="navbar-brand" href="#"><img id="logo"
-            src="./img/cartier-modified.jpg" alt=""
-            draggable="false" height="30" /></a>
+            src="./img/logo.png" alt=""
+            draggable="false" height="25" /></a>
+            
     
           <ul class="navbar-nav ms-3">
             <li class="nav-item me-3">
@@ -40,6 +38,7 @@
             <li><button type="button" class="btn btn-outline-light btn-rounded-2">
               Registrate
             </button></li>
+            <li><button class="btn btn-rounded"><a href="#" target="#contenedorCarrito" id="cart"><i class="fa-regular fa-cart-shopping"></i>Carrito</a></button></li>
           </ul>
         </div>
   
@@ -48,22 +47,18 @@
 </header>
 
   <div class="buscador">
-  <!--<input id="buscador">-->
   
-  <label id="seleccionMarca" for="relojes">Selecciones una Marca:</label>
-
   <select name="relojes" id="buscador">
+    <option disabled selected value> -- seleccione una opcion -- </option>
     <option value="omega">Omega</option>
     <option value="ap">Audemar Piguet</option>
     <option value="iwc">IWC</option>
     <option value="rolex">Rolex</option>
   </select> 
 
-
   <button class="btn btn-primary" id="buscar">BUSCAR</button>
   
-  <button class="btn"><a href="#" target="#contenedorCarrito" id="cart"><i class="fa-regular fa-cart-shopping"></i></a>
-  </button>
+  
   
 </div>
    

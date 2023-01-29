@@ -57,6 +57,7 @@ div#bs-promo-navbar-collapse-1 {
 a.navbar-brand {
   display: flex;
   margin: 10px;
+  width: 55%;
 }
 
 ol ol,
@@ -75,8 +76,7 @@ ul.nav.navbar-nav.navbar-right {
   margin: 10px;
 }
 img#logo {
-  width: 35%;
-  border-radius: 75px;
+  width: 25%;
 }
 
 input[type=checkbox],
@@ -158,4 +158,17 @@ p.texto-descripcion {
 }
 #seleccionMarca{
   padding: 10px;
+}
+select#buscador {
+  padding: 10px;
+}
+button.btn.btn-rounded {
+  background-color: crimson;
+  margin-top: 30px;
+}
+ul.navbar-nav.ms-3 {
+  width: 45%;
+}
+span.me-3 {
+  margin-top: 30px;
 }
