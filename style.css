@@ -10,6 +10,19 @@
   border-color: transparent;
 }
 
+button.btn.btn-outline-light.btn-rounded-2 {
+  margin-top: 30px;
+  margin-right: 20px;
+  justify-content: space-around;
+  margin-left: 30px;
+  display: flex;
+}
+
+div#navbarSupportedContent {
+  /* display: flex; */
+  position: inherit;
+}
+
 .navbar-inverse .navbar-brand {
   color: #fff;
   font-family: "Alfa Slab One", cursive;
@@ -142,4 +155,7 @@ p.texto-descripcion {
   'wght' 400,
   'GRAD' 0,
   'opsz' 48
+}
+#seleccionMarca{
+  padding: 10px;
 }
