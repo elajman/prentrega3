@@ -1,10 +1,9 @@
-
 const shopContent = document.getElementById("shopContenido")
 const verCarrito = document.getElementById("verCarrito")
 const modalContainer = document.getElementById("modal-container")
 
 //Renderizo carrito
-const render = productos.forEach((product) => {
+productos.forEach((product) => {
     let content = document.createElement("div")
     content.className = "card"
     content.innerHTML = `
@@ -69,5 +68,3 @@ let cart = document.getElementById("buscar")
   const salvoLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
-
-console.log(render)
