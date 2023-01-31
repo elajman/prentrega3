@@ -1,3 +1,5 @@
+let carrito = JSON.parse(localStorage.getItem("carrito")) || []
+const cantidadCarrito = document.getElementById("cantidadEnCarrito")
 const pintarCarrito = () => {
 verCarrito.addEventListener('click', () => {
     modalContainer.innerHTML = ""
