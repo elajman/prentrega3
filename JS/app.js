@@ -1,70 +1,76 @@
 const shopContent = document.getElementById("shopContenido")
 const verCarrito = document.getElementById("verCarrito")
 const modalContainer = document.getElementById("modal-container")
+let buscador = document.getElementById("buscador")
+let buscar = document.getElementById("buscar")
+buscar.onclick = filtrar
 
 //Renderizo carrito
-productos.forEach((product) => {
-    let content = document.createElement("div")
-    content.className = "card"
-    content.innerHTML = `
-        <h3>${product.nombre}</h3>
-        <img src=${product.imgUrl}>
-        <p class="precio">USD${product.precio}</p>
-        <p>Quedan ${product.stock} Unidades</p>
-        
-    `
-    shopContent.append(content)
+function renderProductos(nuevoArray) {
+    shopContent.innerHTML = ""
+    nuevoArray.forEach((producto) => {
+        const tarjetaProducto = document.createElement("div")
+        tarjetaProducto.className = "card"
+        tarjetaProducto.innerHTML = `
+        <h4>${producto.nombre}</h4>
+        <img src=${producto.imgUrl}>
+        <p class="precio">USD${producto.precio}</p>
+        <p>Quedan ${producto.stock} Unidades</p>
+        `
+        shopContent.append(tarjetaProducto)
+        let comprar = document.createElement("button")
+        comprar.innerText = "comprar"
+        comprar.className = "comprar"
 
-    let comprar = document.createElement("button")
-    comprar.innerText = "comprar"
-    comprar.className = "comprar"
+        tarjetaProducto.append(comprar)
 
-    content.append(comprar)
+        comprar.addEventListener("click", () => {
+            //sumo cantidades en carrito
+            const seRepite = carrito.some((repiteProducto) => repiteProducto.id === producto.id)
+            if (seRepite) {
+                carrito.map((prod) => {
+                    if (prod.id == producto.id) {
+                        prod.cantidad++
+                    }
+                })
+            } else {
+                carrito.push({
+                    id: producto.id,
+                    imgUrl: producto.imgUrl,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    stock: producto.stock,
+                    cantidad: producto.cantidad
+                })
+            }
 
-    comprar.addEventListener("click", () => {
-    //sumo cantidades en carrito
-        const seRepite = carrito.some((repiteProducto) => repiteProducto.id === product.id)
-        if(seRepite){
-            carrito.map((prod) => {
-                if(prod.id == product.id) {
-                    prod.cantidad++
-                }
-            })
-        } else {
-        carrito.push({
-            id: product.id,
-            imgUrl: product.imgUrl,
-            nombre: product.nombre,
-            precio: product.precio,
-            stock: product.stock,
-            cantidad: product.cantidad
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 1000,
+                gravity: "bottom",
+                position: "right",
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+            }).showToast()
+
+            carritoContador()
+            salvoLocal()
         })
-    }
-    
-    Toastify({
-        text: "Producto agregado al carrito",
-        duration: 1000,
-        gravity: "bottom",
-        position: "right",
-        style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
-        },
-      }).showToast()
-        
-        carritoContador()
-        salvoLocal()
+
     })
 
-})
+}
+renderProductos(productos)
 
-let buscador = document.getElementById("buscador")
-let cart = document.getElementById("buscar")
+//busco por categoria
+function filtrar(e) {
+    console.log("E", e.target.id)
+    let productosFiltrados = productos.filter(producto => producto.nombre.toLowerCase().includes(buscador.value.toLowerCase()) || producto.categoria.toLowerCase().includes(buscador.value.toLowerCase()))
+    console.log(productosFiltrados)
+    renderProductos(productosFiltrados)
+}
 
-
-/**
- * agragear filtrar por categoria
- */
-
-  const salvoLocal = () => {
+const salvoLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
