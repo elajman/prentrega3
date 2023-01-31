@@ -62,8 +62,8 @@ h3 {
 .cantidad-carrito{
     background-color: red;
     color: white;
-    border-radius: 50%;
-    font-size: 12px;
+    border-radius: 45%;
+    font-size: 25px;
     padding: 4px;
     position: absolute;
     display: none;
