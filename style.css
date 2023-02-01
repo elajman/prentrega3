@@ -48,12 +48,7 @@ p.precio {
     display: flex;
     justify-content: space-between;
 }
-.modal-container {
-    margin-top: 30px;
-    background-color: rgb(218, 218, 223);
-    justify-content: center;
-    text-align: center;
-}
+
 h3 {
     color: white;
     cursor: pointer;
@@ -114,4 +109,31 @@ img#logo {
 
 select#buscador {
     height: 37px;
+}
+.modal-container {
+    margin-top: 30px;
+    
+    justify-content: space-evenly;
+    text-align: center;
+    align-content: stretch;
+    align-items: baseline;
+   
+    border: 1px solid;
+}
+.total-content {
+    font-size: 20px;
+    
+    font-family: sans-serif;
+    background-color: cadetblue;
+    padding: 5px;
+    margin-top: 20px;
+}
+button#verCarrito {
+    margin-left: 40px;
+}
+.btn-success {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 10px;
 }

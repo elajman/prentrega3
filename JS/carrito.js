@@ -1,7 +1,10 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 const cantidadCarrito = document.getElementById("cantidadEnCarrito")
-const pintarCarrito = () => {
-    verCarrito.addEventListener('click', () => {
+const verCarrito = document.getElementById("verCarrito")
+
+const muestroCarrito = () => {
+
+    verCarrito.addEventListener("click", () => {
         modalContainer.innerHTML = ""
         const modalHeader = document.createElement('div')
         modalHeader.className = "modal-header"
@@ -18,24 +21,24 @@ const pintarCarrito = () => {
         })
 
         modalHeader.append(modalButton)
-        
+
         carrito.forEach((product) => {
             let carritoContent = document.createElement("div")
             carritoContent.className = "modal-content"
             carritoContent.innerHTML = `
                 <h3>${product.nombre}</h3>
                 <img src=${product.imgUrl}>
-                <p class="precio">USD${product.precio}</p>
+                <p class="precio">usd.${product.precio}</p>
                 <p>Quedan ${product.stock} Unidades</p>
                 <span class="sumo"> + </span>
                 <span class="resto"> - </span>
                 <p>Cantidad: ${product.cantidad}</>
-                <p>Total: ${product.cantidad * product.precio}</p>
                 <button class="btn btn-success" id=${product.id}>Comprar</button>
+                <p>Total: $${product.cantidad * product.precio}</p>
                 `
             if (product.stock < 10) {
                 carritoContent.classList.add("pocoStock")
-                let pocasUnidades = document.createElement('h5')
+                let pocasUnidades = document.createElement('h6')
                 pocasUnidades.innerText = "Quedan pocas unidades"
                 carritoContent.appendChild(pocasUnidades)
 
@@ -48,18 +51,18 @@ const pintarCarrito = () => {
                     product.cantidad--
                 }
                 salvoLocal()
-                pintarCarrito()
+                muestroCarrito()
             })
 
             let sumar = carritoContent.querySelector(".sumo")
             sumar.addEventListener("click", () => {
                 product.cantidad++
                 salvoLocal()
-                pintarCarrito()
+                muestroCarrito()
             })
 
             let elimino = document.createElement("button")
-            elimino.innerText = "Eliminar"
+            elimino.innerText = "Eliminar Producto"
             elimino.className = "btn btn-danger"
             carritoContent.append(elimino)
 
@@ -69,7 +72,7 @@ const pintarCarrito = () => {
             finalizoCompra.addEventListener("click", () => {
                 localStorage.removeItem("carrito")
                 carrito = []
-                pintarCarrito()
+                muestroCarrito()
                 cantidadCarrito.style.display = "none"
                 muestroSweetAlert('Gracias por su compra', false)
                 modalContainer.style.display = "none"
@@ -83,13 +86,24 @@ const pintarCarrito = () => {
         totalCompra.innerHTML = `Total a Pagar: $${total}`
         modalContainer.append(totalCompra)
     })
+
 }
-verCarrito.addEventListener("click", pintarCarrito)
+verCarrito.addEventListener("click", muestroCarrito)
+
+/*const eliminoProducto = (id) => {
+    carrito = carrito.filter((carritoId) => {
+        return carritoId.id !== id
+    })
+    carritoContador()
+    salvoLocal()
+    muestroCarrito()
+}*/
 
 const eliminoProducto = () => {
-    const encuentroId = carrito.find((element) => element.id)
+    const encuentroId = carrito.find((elemento) => elemento.id)
     carrito = carrito.filter((carritoId) => {
         return carritoId !== encuentroId
+
     })
     carritoContador()
     salvoLocal()
@@ -97,11 +111,12 @@ const eliminoProducto = () => {
 }
 
 const carritoContador = () => {
-    cantidadCarrito.style.display = "block"
+    cantidadCarrito.style.display = "flex"
     const carritoJson = carrito.length
     localStorage.setItem("carritoJson", JSON.stringify(carritoJson))
 
     cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoJson"))
+    
 }
 carritoContador()
 

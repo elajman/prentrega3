@@ -1,5 +1,4 @@
 const shopContent = document.getElementById("shopContenido")
-const verCarrito = document.getElementById("verCarrito")
 const modalContainer = document.getElementById("modal-container")
 let buscador = document.getElementById("buscador")
 let buscar = document.getElementById("buscar")

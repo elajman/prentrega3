@@ -1,6 +1,5 @@
 let productos = [
     { id: 002, cantidad: 1, nombre: "Patek Philippe", categoria: "A1", precio: 78000, stock: 6, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/231989/PatekPhilippe-Nautilus-71181200A-001-231989-6-221124-142341.jpg;quality=90;h=425" },
-    { id: 005, cantidad: 1, nombre: "Omega", categoria: "B1", precio: 6965, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/221669/Omega-SpeedmasterMoonwatchProfessional-310.30.42.50.01.002-221669-1-230106-113133.jpg;quality=90;h=425" },
     { id: 001, cantidad: 1, nombre: "IWC", categoria: "C1", precio: 19300, stock: 8, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/211565/IWC-PortofinoAutomatic-IW459402-211565-3-221102-165704.jpg;quality=90;h=425" },
     { id: 0031, cantidad: 1, nombre: "AP", categoria: "A1", precio: 40000, stock: 10, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/232881/AudemarsPiguet-RoyalOak-15400ST.OO.1220ST.04-232881-1-221128-094029.jpg;quality=90;h=425" },
     { id: 0010, cantidad: 1, nombre: "Patek Philippe", categoria: "A1", precio: 78000, stock: 6, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/231989/PatekPhilippe-Nautilus-71181200A-001-231989-6-221124-142341.jpg;quality=90;h=425" },
@@ -14,14 +13,10 @@ let productos = [
     { id: 007, cantidad: 1, nombre: "IWC", categoria: "C1", precio: 7800, stock: 8, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/226794/IWC-BigPilots-IW502708-226794-3-220817-145001.jpg;quality=90;h=425" },
     { id: 006, cantidad: 1, nombre: "AP", categoria: "A1", precio: 40000, stock: 10, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/232881/AudemarsPiguet-RoyalOak-15400ST.OO.1220ST.04-232881-1-221128-094029.jpg;quality=90;h=425" },
     { id: 0020, cantidad: 1, nombre: "Patek Philippe", categoria: "A1", precio: 78000, stock: 6, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/231989/PatekPhilippe-Nautilus-71181200A-001-231989-6-221124-142341.jpg;quality=90;h=425" },
-    { id: 0021, cantidad: 1, nombre: "Omega", categoria: "B1", precio: 6000, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/212195/Omega-OlympicSeamaster-522.30.42.20.04.001-212195-2-220131-131308.jpg;quality=90;h=425" },
     { id: 0025, cantidad: 1, nombre: "IWC", categoria: "C1", precio: 23000, stock: 3, imgUrl: "https://images.watchfinder.co.uk/imgv3/stock/215872/IWC-Portugieser%20Perpetual%20Calendar-IW502307-215872-230127-094650.jpg;quality=90;h=425" },
     { id: 0026, cantidad: 1, nombre: "AP", categoria: "A1", precio: 40000, stock: 10, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/232881/AudemarsPiguet-RoyalOak-15400ST.OO.1220ST.04-232881-1-221128-094029.jpg;quality=90;h=425" },
-    { id: 0022, cantidad: 1, nombre: "Omega", categoria: "B1", precio: 6000, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/212195/Omega-OlympicSeamaster-522.30.42.20.04.001-212195-2-220131-131308.jpg;quality=90;h=425" },
-    { id: 0030, cantidad: 1, nombre: "Omega", categoria: "B1", precio: 6000, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/212195/Omega-OlympicSeamaster-522.30.42.20.04.001-212195-2-220131-131308.jpg;quality=90;h=425" },
     { id: 0031, cantidad: 1, nombre: "Rolex", categoria: "A1", precio: 58050, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/catalogue/25676/Rolex-Daytona-116506-25676-190227-143650-.jpg;quality=90;h=425" },
     { id: 0033, cantidad: 1, nombre: "Rolex", categoria: "A1", precio: 15000, stock: 10, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/229915/Rolex-GMTMasterII-116710LN-229915-2-220923-083457.jpg;quality=90;h=425" },
     { id: 0035, cantidad: 1, nombre: "Rolex", categoria: "A1", precio: 20600, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/221540/Rolex-GMTMasterII-116710BLNR-221540-2-220607-144153.jpg;quality=90;h=425" },
-    { id: 0040, cantidad: 1, nombre: "Rolex", categoria: "A1", precio: 32500, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/239023/Rolex-Daytona-116500LN-239023-2-230111-101738.jpg;quality=90;h=425" },
-    { id: 0033, cantidad: 1, nombre: "Rolex", categoria: "A1", precio: 15000, stock: 10, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/229915/Rolex-GMTMasterII-116710LN-229915-2-220923-083457.jpg;quality=90;h=425" }
+    { id: 0040, cantidad: 1, nombre: "Rolex", categoria: "A1", precio: 32500, stock: 4, imgUrl: "https://images.watchfinder.co.uk/imgv2/stock/239023/Rolex-Daytona-116500LN-239023-2-230111-101738.jpg;quality=90;h=425" }
   ]
