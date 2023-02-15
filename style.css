@@ -51,7 +51,7 @@ p.precio {
 }
 
 h3 {
-    color: white;
+    color: rgb(201, 24, 24);
     cursor: pointer;
 }
 
@@ -137,4 +137,27 @@ button#verCarrito {
     flex-wrap: wrap;
     margin: auto;
     margin-top: 10px;
+}
+.text-white {
+    background-color: black;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+}
+button.sumo.btn.btn-primary {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 12px;
+}
+button.resto.btn.btn-primary {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 8px;
 }
